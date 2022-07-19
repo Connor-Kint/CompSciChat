@@ -105,18 +105,11 @@ body {
     justify-content: space-between;
     border-bottom: 2px solid #e6e6e6;
 }
-.wrapper img{
-    object-fit: cover;
-    border-radius: 50%;
-}
+
 .users header .content,
 .users-list a .content{
     display: flex;
     align-items: center;
-}
-.users header .content img{
-    height: 50px;
-    width: 50px;
 }
 .users header .details,
 .users-list a .details{
@@ -185,10 +178,6 @@ body {
     border: none;
     margin-bottom: 0px;
 }
-.users-list a .content img{
-    height: 40px;
-    width: 40px;
-}
 .users-list a .content p{
     color: #ffffff;
 }
@@ -199,21 +188,26 @@ body {
     display: flex;
     align-items: center;
     padding: 18px 30px;
+    
 }
-.chat-area header .button{
-    font-size: 18px;
-    color: #333;
-    width: 50px;
-}
-.chat-area header img{
-    height: 45px;
-    width: 45px;
-    margin: 0 15px;
+.chat-area header button{
+    font-size: 16px;
+    color: white;
+    background: rgb(0, 2, 112);
+    border: none;
+    margin-right: 18px;
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    
 }
 .chat-area header span{
     font-size: 17px;
     font-weight: 500;
+    
+    
 }
+
 .chat-box{
     height: 500px;
     background: #f7f7f7;
@@ -244,10 +238,7 @@ body {
     display: flex;
     align-items: flex-end;
 }
-.chat-box .incoming .img{
-    height: 35px;
-    width: 35px;
-}
+
 .incoming .details{
     margin-left: 10px;
     margin-right: auto;

@@ -12,18 +12,18 @@
             <section class="form login">
                 <header>Comp Sci Chat</header>
                 <form action="#">
-                    <div class="error-txt">ERROR MESAGE</div>
+                    <div class="error-txt">ERROR MESSAGE</div>
                     <div class="field input">
                         <label>MyLaurier Email</label>
-                        <input type="text" placeholder="Enter MyLaurier Email">
+                        <input type="text" name="email" placeholder="Enter MyLaurier Email" required>
                     </div>
                     <div class="field input">
                         <label>Password</label>
-                        <input type="password" placeholder="Create a Password">
+                        <input type="password" name="password" placeholder="Create a Password">
                         <button type="button">Show/Hide Password</button>
                     </div>
                     <div class="field button">
-                        <input type="submit" value="Continue">
+                        <input type="submit" value="Continue" required>
                     </div>
                     
                 </form>
@@ -32,6 +32,7 @@
         </div>
 
         <script src="javascript/pass-show-hide.js"></script>
+        <script src="javascript/login.js"></script>
 
     </body>
 </html>

@@ -152,19 +152,24 @@ body {
     border-radius: 5px 0 0 5px;
     outline: none;
 }
-.users .search button{
-    position: relative;
-    z-index: 1;
-    width: 55px;
-    height: 42px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #333;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 0 5px 5px 0;
+.users .modal-container .modal{
+    align-items: center;
+    font-size: 16px;
 }
+.modal-container{
+    font-size: 16px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+}
+.modal-container .modal span{
+    align-items: center;
+    font-size: 16px;
+}
+
 .users-list{
     max-height: 450px;
     overflow-y: auto;

@@ -25,7 +25,8 @@
                             <p>Active Now</p>
                         </div>
                     </div>
-                    <button href="#" class="logout">Logout</a>
+                    <button href="#" class="change name" id="change-name">Change Name</button>
+                    <button href="#" class="logout">Logout</button>
                 </header>
                 <div class="users-list">
                     <button class="course-button CP476">
@@ -54,6 +55,15 @@
                     </button>
                 </div>
             </section>
+        </div>
+        <div class="modal-container" id="modal_container">
+            <div class="modal">
+                <span>Change Your Name</span>
+                <input type="text" name="newfname" class="input-field">
+                <input type="text" name="newlname" class="input-field">
+                <button class="close-button" id="close-button">Save and Close</button>
+                <button class="exit-button" id="exit-button">Exit</button>
+            </div>
         </div>
         <script src="javascript/courses.js"></script>
     </body>

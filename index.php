@@ -1,12 +1,4 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Comp Sci Chat</title>
-        <link rel="stylesheet" href="style.css">
-    
-    </head>
+<?php include_once "header.php";?>
     <body>
         <div class="wrapper">
             <section class="form signup">
@@ -41,9 +33,9 @@
             </section>
         </div>
 
-        <script src="javascript\pass-show-hide.js"></script>
+        <script src="javascript/pass-show-hide.js"></script>
         <script src="javascript/signup.js"></script>
 
     </body>
-</html>
+
     

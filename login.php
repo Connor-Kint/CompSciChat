@@ -27,7 +27,7 @@
                     </div>
                     
                 </form>
-                <div class="link">Not a member yet? <a href="#">Sign up here</a></div>
+                <div class="link">Not a member yet? <a href="index.php">Sign up here</a></div>
             </section>
         </div>
 

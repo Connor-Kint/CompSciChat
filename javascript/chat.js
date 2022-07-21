@@ -4,8 +4,14 @@ inputField = form.querySelector(".input-field"),
 sendBtn = form.querySelector("button"),
 chatBox = document.querySelector(".chat-box");
 
+backBtn = document.querySelector(".back");
+
 form.onsubmit = (e)=>{
     e.preventDefault();
+}
+
+backBtn.onclick = ()=> {
+    location.href="courses.php";
 }
 
 sendBtn.onclick = ()=>{

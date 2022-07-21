@@ -6,7 +6,7 @@
         $course = mysqli_real_escape_string($conn, $_POST['courseid']);
         $output = "";
 
-        $sql = "SELECT * FROM messages WHERE (courseid = '{$course}') ORDER BY msgid ASC";
+        $sql = "SELECT * FROM messages INNER JOIN users ON (messages.outgoing_msgid = users.uniqueid) WHERE (courseid = '{$course}') ORDER BY msgid ASC";
         $query = mysqli_query($conn, $sql);
 
         if(mysqli_num_rows($query) > 0){
@@ -18,11 +18,22 @@
                                     </div>
                                 </div>';
                 }else{
-                    $output .= '<div class="chat incoming">
-                                    <div class="details">
-                                        <p>'. $row['msg'] .'</p>
-                                    </div>
-                                </div>';
+                    if($row['prof'] == 1) {
+                        $output .= '<p>PROFESSOR</p>
+                            <div class="chat incoming">
+                                <div class="details">
+                                    <p>'. $row['msg'] .'</p>
+                                </div>
+                            </div>';
+                    } else {
+                        $output .= '<p>'. $row['fname'] . ' ' . $row['lname'] . '</p>
+                            <div class="chat incoming">
+                                <div class="details">
+                                    <p>'. $row['msg'] .'</p>
+                                </div>
+                            </div>';
+                    }
+                    
                 }
             }
         } else {

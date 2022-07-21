@@ -23,10 +23,9 @@
         <div class="wrapper">
             <section class="chat-area">
                 <header>
-                    <button type="button">Back</button>
+                    <button type="button" class="back">Back</button>
                     <div class="details">
-                        <span>Connor Kint</span>
-                        <p>Active Now</p>
+                        <span><?php echo $courseid; ?></span>
                     </div>
                 </header>
                 <div class="chat-box">

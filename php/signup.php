@@ -12,10 +12,9 @@
                 echo "$email - This email already exist!";
             }else{
                 $ran_id = rand(time(), 100000000);
-                $status = "Active Now";
                 $encrypt_pass = md5($password);
-                $insert_query = mysqli_query($conn, "INSERT INTO users (fname, lname, email, password, prof, status, uniqueid)
-                VALUE ('{$fname}', '{$lname}', '{$email}', '{$encrypt_pass}', '0', '{$status}', {$ran_id})");
+                $insert_query = mysqli_query($conn, "INSERT INTO users (fname, lname, email, password, prof, uniqueid)
+                VALUE ('{$fname}', '{$lname}', '{$email}', '{$encrypt_pass}', '0', {$ran_id})");
                 if ($insert_query) {
                     $select_sql2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
                     if(mysqli_num_rows($select_sql2) > 0) {

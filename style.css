@@ -41,6 +41,7 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
     border: 1px solid #f5c6cb;
+    display: none;
 }
 .form form .name-details{
     display: flex;
@@ -277,4 +278,22 @@ body {
     font-size: 19px;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
+}
+
+.users .modal-container .modal{
+    align-items: center;
+    font-size: 16px;
+}
+.modal-container{
+    font-size: 16px;
+    opacity: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+}
+.modal-container .modal span{
+    align-items: center;
+    font-size: 16px;
 }

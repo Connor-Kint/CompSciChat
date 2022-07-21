@@ -22,10 +22,10 @@
                     <div class="content">
                         <div class="details">
                             <span>Comp Sci Chat</span>
-                            <p>Active Now</p>
                         </div>
                     </div>
-                    <button href="#" class="logout">Logout</a>
+                    <button href="#" class="change name" id="change-name">Change Name</button>
+                    <a href="login.php" class="logout">Logout</a>
                 </header>
                 <div class="users-list">
                     <button class="course-button CP476">
@@ -55,6 +55,18 @@
                 </div>
             </section>
         </div>
+        <div class="modal-container" id="modal_container">
+            <div class="modal">
+                <form class="change-name">
+                <span>Change Your Name</span>
+                    <input type="text" name="fname" placeholder="new first name" class="input-field">
+                    <input type="text" name="lname" placeholder="new last name" class="input-field">
+                    <input type="submit" class="save-name" value="Save">
+                    <button class="exit-button" id="exit-button">Exit</button>
+                </form>
+            </div>
+        </div>
+        <script src="javascript/change-name.js"></script>
         <script src="javascript/courses.js"></script>
     </body>
 </html>

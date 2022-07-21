@@ -10,14 +10,8 @@
             $user_pass = md5($password);
             $enc_pass = $row['password'];
             if($user_pass === $enc_pass){
-                $status = "Active now";
-                $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE uniqueid = {$row['uniqueid']}");
-                if($sql2){
-                    $_SESSION['uniqueid'] = $row['uniqueid'];
-                    echo "success";
-                }else{
-                    echo "Something went wrong. Please try again!";
-                }
+                $_SESSION['uniqueid'] = $row['uniqueid'];
+                echo "success";
             }else{
                 echo "Email or Password is Incorrect!";
             }

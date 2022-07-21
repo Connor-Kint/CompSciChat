@@ -1,3 +1,12 @@
+<?php 
+  session_start();
+  include_once "php/config.php";
+  if(!isset($_SESSION['uniqueid'])){
+    header("location: login.php");
+  }
+?>
+
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -8,6 +17,9 @@
     
     </head>
     <body>
+        <?php
+            $courseid = mysqli_real_escape_string($conn, $_GET['courseid']);
+        ?>
         <div class="wrapper">
             <section class="chat-area">
                 <header>
@@ -18,23 +30,16 @@
                     </div>
                 </header>
                 <div class="chat-box">
-                    <div class="chat outgoing">
-                        <div class="details">
-                            <p>This is an example message</p>
-                        </div>
-                    </div>
-                    <div class="chat incoming">
-                        <div class="details">
-                            <p>This is an example message</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 <form action="#" class="typing-area">
-                    <input type="text" placeholder="Type your message here">
+                    <input type="text" class="courseid" name="courseid" value="<?php echo $courseid; ?>" hidden>
+                    <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off">
                     <button>Send</button>
                 </form>
             </section>
         </div>
+        <script src="javascript/chat.js"></script>
     </body>
 </html>
     

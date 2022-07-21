@@ -98,7 +98,7 @@ body {
     padding: 25px 30px;
 }
 .users header,
-.users-list a{
+.users-list button{
     display: flex;
     align-items: center;
     padding-bottom: 20px;
@@ -107,22 +107,22 @@ body {
 }
 
 .users header .content,
-.users-list a .content{
+.users-list button .content{
     display: flex;
     align-items: center;
 }
 .users header .details,
-.users-list a .details{
+.users-list button .details{
     margin-left: 15px;
 }
 .users header .details span,
-.users-list a .details span{
+.users-list button .details span{
     font-size: 18px;
     font-weight: 500;
     color: rgb(255, 255, 255);
 }
 .users header .details p,
-.users-list a .content .details p{
+.users-list button .content .details p{
     color: rgb(0, 0, 0);
 }
 .users header .logout{
@@ -169,17 +169,21 @@ body {
     max-height: 450px;
     overflow-y: auto;
 }
-.users-list a{
+.users-list button{
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom-color: rgb(255, 255, 255);
 }
-.users-list a:last-child{
+.users-list button:last-child{
     border: none;
     margin-bottom: 0px;
 }
-.users-list a .content p{
+.users-list button .content p{
     color: #ffffff;
+}
+
+.content button {
+    border-style: none;
 }
 
 

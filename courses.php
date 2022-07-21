@@ -1,3 +1,11 @@
+<?php 
+  session_start();
+  include_once "php/config.php";
+  if(!isset($_SESSION['uniqueid'])){
+    header("location: login.php");
+  }
+?>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -17,41 +25,37 @@
                             <p>Active Now</p>
                         </div>
                     </div>
-                    <a href="#" class="logout">Logout</a>
+                    <button href="#" class="logout">Logout</a>
                 </header>
-                <!-- <div class="search">
-                    <span class="text">Select a course to start chatting</span>
-                    <input type="text" placeholder="Enter course code to search">
-                    <button type="button">search</button>
-                </div> -->
                 <div class="users-list">
-                    <a href="#">
+                    <button class="course-button CP476">
                         <div class="content">
                             <div class="details">
-                                <span>CP476</span>
+                                <p>CP476</p>
                                 <p>Internet Computing</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="#">
+                    </button>
+                    <button class="course-button CP468" >
                         <div class="content">
                             <div class="details">
-                                <span>CP468</span>
+                                <p>CP468</p>
                                 <p>Artificial Intelligence</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="#">
+                    </button>
+                    <button class="course-button CP423">
                         <div class="content">
                             <div class="details">
-                                <span>CP423</span>
+                                <p>CP423</p>
                                 <p>Text Retrieval and Search Engine</p>
                             </div>
                         </div>
-                    </a>
+                    </button>
                 </div>
             </section>
         </div>
+        <script src="javascript/courses.js"></script>
     </body>
 </html>
     
